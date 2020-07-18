@@ -8,7 +8,7 @@ namespace SayusiAndo.Carbon.BlazoredFast
         {
             public const string ExpandMode = "expand-mode";
         }
-        
+
         public const string FastAccordionItem = "fast-accordion-item";
     }
 }

@@ -19,6 +19,27 @@ namespace BlazoredFast.Tests.Components.Accordion
     public class BfAccordionItemContent_Should : TestContext
     {
         [Fact]
+        public async Task SplatUnknownParameters()
+        {
+            // Arrange
+            IRenderedComponent<BfAccordion> cut = RenderComponent<BfAccordion>(
+                p => p.AddChildContent<BfAccordionItem>(
+                    pp => pp.AddChildContent<BfAccordionItemContent>(
+                        ppp => { ppp.AddUnmatched("custom", "value"); }
+                    )
+                )
+            );
+
+            // Assert
+            IAttr attr = cut.Find($"{FastHtmlElements.FastAccordion}>" +
+                                  $"{FastHtmlElements.FastAccordionItem}>" +
+                                  $"div")
+                .Attributes
+                .GetNamedItem("custom");
+            attr.Value.Should().Be("value");
+        }
+
+        [Fact]
         public async Task WrapContent()
         {
             // Arrange
@@ -38,27 +59,6 @@ namespace BlazoredFast.Tests.Components.Accordion
                 .Contains("content")
                 .Should()
                 .BeTrue();
-        }
-
-        [Fact]
-        public async Task SplatUnknownParameters()
-        {
-            // Arrange
-            IRenderedComponent<BfAccordion> cut = RenderComponent<BfAccordion>(
-                p => p.AddChildContent<BfAccordionItem>(
-                    pp => pp.AddChildContent<BfAccordionItemContent>(
-                        ppp => { ppp.AddUnmatched("custom", "value"); }
-                    )
-                )
-            );
-
-            // Assert
-            IAttr attr = cut.Find($"{FastHtmlElements.FastAccordion}>" +
-                                  $"{FastHtmlElements.FastAccordionItem}>" +
-                                  $"div")
-                .Attributes
-                .GetNamedItem("custom");
-            attr.Value.Should().Be("value");
         }
     }
 }

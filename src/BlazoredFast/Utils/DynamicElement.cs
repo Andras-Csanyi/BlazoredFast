@@ -23,7 +23,8 @@ namespace SayusiAndo.Carbon.BlazoredFast.Utils
         [Parameter]
         public ElementReference ElementReference { get; set; }
 
-        [Parameter] public Action<ElementReference> ElementReferenceChanged { get; set; }
+        [Parameter]
+        public Action<ElementReference> ElementReferenceChanged { get; set; }
 
         /// <summary>
         ///     Content of the HTML element

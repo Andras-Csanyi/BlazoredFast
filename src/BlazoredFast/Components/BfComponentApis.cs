@@ -1,19 +1,19 @@
 namespace SayusiAndo.Carbon.BlazoredFast.Components
 {
     /// <summary>
-    /// Api and api values for Bf* components.
+    ///     Api and api values for Bf* components.
     /// </summary>
     public struct BfComponentApis
     {
         /// <summary>
-        /// BfAccordion component Api.
+        ///     BfAccordion component Api.
         /// </summary>
         public struct BfAccordion
         {
             public const string ExpandMode = "expand-mode";
 
             /// <summary>
-            /// BfAccordion Api values for configuration.
+            ///     BfAccordion Api values for configuration.
             /// </summary>
             public struct ExpandModeValues
             {

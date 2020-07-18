@@ -1,7 +1,6 @@
 namespace BlazoredFast.Tests.Components.Accordion
 {
     using System.Diagnostics.CodeAnalysis;
-    using System.Linq;
     using System.Threading.Tasks;
 
     using AngleSharp.Dom;
@@ -33,7 +32,7 @@ namespace BlazoredFast.Tests.Components.Accordion
 
             attr.Should().NotBeNull();
         }
-        
+
         [Fact]
         public async Task Have_ExpandMode_Attribute_SetToMulti_WhenConfiguredSo()
         {
@@ -48,7 +47,7 @@ namespace BlazoredFast.Tests.Components.Accordion
 
             attr.Should().NotBeNull();
         }
-        
+
         [Fact]
         public async Task Have_ExpandMode_Attribute_SetToSingle_WhenConfiguredSo()
         {

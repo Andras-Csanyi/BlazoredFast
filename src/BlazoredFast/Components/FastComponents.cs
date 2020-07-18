@@ -1,7 +1,7 @@
 namespace SayusiAndo.Carbon.BlazoredFast.Components
 {
     /// <summary>
-    /// List of available FAST components.
+    ///     List of available FAST components.
     /// </summary>
     public struct FastComponents
     {
@@ -9,7 +9,7 @@ namespace SayusiAndo.Carbon.BlazoredFast.Components
         public const string FastAccordionItem = "fast-accordion-item";
 
         /// <summary>
-        /// Css values of FastAccordionItemCss component.
+        ///     Css values of FastAccordionItemCss component.
         /// </summary>
         public struct FastAccordionItemCss
         {

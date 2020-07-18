@@ -10,7 +10,6 @@ namespace BlazoredFast.Tests.Components.Accordion
     using FluentAssertions;
 
     using SayusiAndo.Carbon.BlazoredFast;
-    using SayusiAndo.Carbon.BlazoredFast.Components;
     using SayusiAndo.Carbon.BlazoredFast.Components.Accordion;
 
     using Xunit;

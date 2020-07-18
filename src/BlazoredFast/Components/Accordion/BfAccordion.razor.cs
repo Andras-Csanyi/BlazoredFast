@@ -6,34 +6,33 @@ namespace SayusiAndo.Carbon.BlazoredFast.Components.Accordion
     using Microsoft.AspNetCore.Components;
 
     /// <summary>
-    /// BfAccordion component
-    ///
-    /// It is the top most element of a accordion component
+    ///     BfAccordion component
+    ///     It is the top most element of a accordion component
     /// </summary>
     public partial class BfAccordion
     {
+        private string _expandModel = BfComponentApis.BfAccordion.ExpandModeValues.Multi;
+
         /// <summary>
-        /// The content of the component
+        ///     The content of the component
         /// </summary>
         [Parameter]
         public RenderFragment ChildContent { get; set; }
-        
+
         /// <summary>
-        /// Defines whether the accordion is single or multiple expand mode.
-        /// It can be configured using <see cref="BfComponentApis.BfAccordion.ExpandMode"/>
-        /// and the Api values <see cref="BfComponentApis.BfAccordion.ExpandModeValues"/>
+        ///     Defines whether the accordion is single or multiple expand mode.
+        ///     It can be configured using <see cref="BfComponentApis.BfAccordion.ExpandMode" />
+        ///     and the Api values <see cref="BfComponentApis.BfAccordion.ExpandModeValues" />
         /// </summary>
         [Parameter]
         public string ExpandMode { get; set; }
 
         /// <summary>
-        /// Any other attribute of the component. Blazor processes these according to the
-        /// attribute splatting doc.
+        ///     Any other attribute of the component. Blazor processes these according to the
+        ///     attribute splatting doc.
         /// </summary>
         [Parameter(CaptureUnmatchedValues = true)]
         public IDictionary<string, object> UnknownParameters { get; set; }
-        
-        private string _expandModel = BfComponentApis.BfAccordion.ExpandModeValues.Multi;
 
         protected override async Task OnInitializedAsync()
         {
@@ -49,7 +48,7 @@ namespace SayusiAndo.Carbon.BlazoredFast.Components.Accordion
                     case BfComponentApis.BfAccordion.ExpandModeValues.Multi:
                         _expandModel = BfComponentApis.BfAccordion.ExpandModeValues.Multi;
                         break;
-                    
+
                     case BfComponentApis.BfAccordion.ExpandModeValues.Single:
                         _expandModel = BfComponentApis.BfAccordion.ExpandModeValues.Single;
                         break;
