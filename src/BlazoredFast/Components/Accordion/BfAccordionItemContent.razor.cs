@@ -4,10 +4,21 @@ namespace SayusiAndo.Carbon.BlazoredFast.Components.Accordion
 
     using Microsoft.AspNetCore.Components;
 
+    /// <summary>
+    ///     BfAccordionItemContent component.
+    /// </summary>
     public partial class BfAccordionItemContent
     {
-        [Parameter] public RenderFragment ChildContent { get; set; }
+        /// <summary>
+        ///     The content of the component.
+        /// </summary>
+        [Parameter]
+        public RenderFragment ChildContent { get; set; }
 
+        /// <summary>
+        ///     Any other attribute the component have will be processes by Blazor.
+        ///     This process is described in its Attribute Splatting section.
+        /// </summary>
         [Parameter(CaptureUnmatchedValues = true)]
         public Dictionary<string, object> UnknownParameters { get; set; }
     }
