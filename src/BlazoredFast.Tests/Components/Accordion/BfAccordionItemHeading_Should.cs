@@ -16,7 +16,7 @@ namespace BlazoredFast.Tests.Components.Accordion
 
     [SuppressMessage("ReSharper", "InconsistentNaming")]
     [ExcludeFromCodeCoverage]
-    public class BfAccordionItemContent_Should : TestContext
+    public class BfAccordionItemHeading_Should : TestContext
     {
         [Fact]
         public async Task WrapContent()
@@ -24,7 +24,7 @@ namespace BlazoredFast.Tests.Components.Accordion
             // Arrange
             IRenderedComponent<BfAccordion> cut = RenderComponent<BfAccordion>(
                 p => p.AddChildContent<BfAccordionItem>(
-                    pp => pp.AddChildContent<BfAccordionItemContent>(
+                    pp => pp.AddChildContent<BfAccordionItemHeading>(
                         ppp => ppp.AddChildContent("content")
                     )
                 )
@@ -33,7 +33,7 @@ namespace BlazoredFast.Tests.Components.Accordion
             // Assert
             cut.Find($"{FastHtmlElements.FastAccordion}>" +
                      $"{FastHtmlElements.FastAccordionItem}>" +
-                     $"div")
+                     $"span")
                 .InnerHtml
                 .Contains("content")
                 .Should()
@@ -46,7 +46,7 @@ namespace BlazoredFast.Tests.Components.Accordion
             // Arrange
             IRenderedComponent<BfAccordion> cut = RenderComponent<BfAccordion>(
                 p => p.AddChildContent<BfAccordionItem>(
-                    pp => pp.AddChildContent<BfAccordionItemContent>(
+                    pp => pp.AddChildContent<BfAccordionItemHeading>(
                         ppp => { ppp.AddUnmatched("custom", "value"); }
                     )
                 )
@@ -55,7 +55,7 @@ namespace BlazoredFast.Tests.Components.Accordion
             // Assert
             IAttr attr = cut.Find($"{FastHtmlElements.FastAccordion}>" +
                                   $"{FastHtmlElements.FastAccordionItem}>" +
-                                  $"div")
+                                  $"span")
                 .Attributes
                 .GetNamedItem("custom");
             attr.Value.Should().Be("value");
