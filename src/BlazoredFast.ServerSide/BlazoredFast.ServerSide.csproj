@@ -2,6 +2,18 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <RootNamespace>SayusiAndo.Carbon.BlazoredFast.ServerSide</RootNamespace>
+        <AssemblyName>SayusiAndo.Carbon.BlazoredFast.ServerSide</AssemblyName>
     </PropertyGroup>
+
+    <ItemGroup>
+        <Content Update="Pages\BfAccordionPage.razor">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\BlazoredFast\BlazoredFast.csproj"/>
+    </ItemGroup>
 
 </Project>

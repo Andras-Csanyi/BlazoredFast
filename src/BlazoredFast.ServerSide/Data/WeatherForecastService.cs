@@ -1,9 +1,9 @@
-using System;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace BlazoredFast.ServerSide.Data
+namespace SayusiAndo.Carbon.BlazoredFast.ServerSide.Data
 {
+    using System;
+    using System.Linq;
+    using System.Threading.Tasks;
+
     public class WeatherForecastService
     {
         private static readonly string[] Summaries = new[]
