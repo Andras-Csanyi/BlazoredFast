@@ -1,12 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazoredFast", "BlazoredFast\BlazoredFast.csproj", "{42189AD3-9A66-4905-8E3C-7E0234E35794}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazoredFast.ServerSide", "BlazoredFast.ServerSide\BlazoredFast.ServerSide.csproj", "{22454D67-DC4B-419C-A2B2-3F9465E5FF37}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazoredFast.Tests", "BlazoredFast.Tests\BlazoredFast.Tests.csproj", "{4C72CBC3-0E36-48A2-8EF0-DB2859AF5F24}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{638FDBA4-2EB3-47D6-BBA7-C3965E75AC51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazoredFast", "BlazoredFast\BlazoredFast.csproj", "{3EFAE713-636D-4C3C-A6F8-719ED997F593}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,10 +14,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{42189AD3-9A66-4905-8E3C-7E0234E35794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42189AD3-9A66-4905-8E3C-7E0234E35794}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42189AD3-9A66-4905-8E3C-7E0234E35794}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42189AD3-9A66-4905-8E3C-7E0234E35794}.Release|Any CPU.Build.0 = Release|Any CPU
 		{22454D67-DC4B-419C-A2B2-3F9465E5FF37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{22454D67-DC4B-419C-A2B2-3F9465E5FF37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22454D67-DC4B-419C-A2B2-3F9465E5FF37}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -26,5 +22,9 @@ Global
 		{4C72CBC3-0E36-48A2-8EF0-DB2859AF5F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C72CBC3-0E36-48A2-8EF0-DB2859AF5F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C72CBC3-0E36-48A2-8EF0-DB2859AF5F24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EFAE713-636D-4C3C-A6F8-719ED997F593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EFAE713-636D-4C3C-A6F8-719ED997F593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EFAE713-636D-4C3C-A6F8-719ED997F593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EFAE713-636D-4C3C-A6F8-719ED997F593}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
