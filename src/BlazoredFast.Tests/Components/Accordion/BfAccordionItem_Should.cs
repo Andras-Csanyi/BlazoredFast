@@ -12,17 +12,17 @@ namespace BlazoredFast.Tests.Components.Accordion
     public class BfAccordionItem_Should : TestContext
     {
         [Fact]
-        public async Task HaveTheRightCssClasses()
-        {
-        }
-
-        [Fact]
         public async Task BeClosed_ByDefault()
         {
         }
 
         [Fact]
         public async Task BeOpened_WhenConfiguredSo()
+        {
+        }
+
+        [Fact]
+        public async Task HaveTheRightCssClasses()
         {
         }
 

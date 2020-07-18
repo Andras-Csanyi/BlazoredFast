@@ -1,6 +1,5 @@
 namespace SayusiAndo.Carbon.BlazoredFast.Components.Accordion
 {
-    using System.Collections;
     using System.Collections.Generic;
 
     using Microsoft.AspNetCore.Components;
