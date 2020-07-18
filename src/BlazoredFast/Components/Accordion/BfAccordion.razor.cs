@@ -5,14 +5,31 @@ namespace SayusiAndo.Carbon.BlazoredFast.Components.Accordion
 
     using Microsoft.AspNetCore.Components;
 
+    /// <summary>
+    /// BfAccordion component
+    ///
+    /// It is the top most element of a accordion component
+    /// </summary>
     public partial class BfAccordion
     {
+        /// <summary>
+        /// The content of the component
+        /// </summary>
         [Parameter]
         public RenderFragment ChildContent { get; set; }
         
+        /// <summary>
+        /// Defines whether the accordion is single or multiple expand mode.
+        /// It can be configured using <see cref="BfComponentApis.BfAccordion.ExpandMode"/>
+        /// and the Api values <see cref="BfComponentApis.BfAccordion.ExpandModeValues"/>
+        /// </summary>
         [Parameter]
         public string ExpandMode { get; set; }
 
+        /// <summary>
+        /// Any other attribute of the component. Blazor processes these according to the
+        /// attribute splatting doc.
+        /// </summary>
         [Parameter(CaptureUnmatchedValues = true)]
         public IDictionary<string, object> UnknownParameters { get; set; }
         
