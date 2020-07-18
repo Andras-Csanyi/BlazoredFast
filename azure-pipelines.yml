@@ -24,16 +24,16 @@ steps:
   displayName: 'dotnet restore command'
   inputs:
     command: 'restore'
-    projects: 'src/BlazoredFast.sln'
+    projects: 'src/BalzoredFast.sln'
     feedsToUse: 'select'
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build command'
   inputs:
     command: 'build'
-    projects: 'src/BlazoredFast.sln'
+    projects: 'src/BalzoredFast.sln'
 - task: DotNetCoreCLI@2
   displayName: 'dotnet test command'
   inputs:
     command: 'test'
-    projects: 'src/BlazoredFast.sln'
+    projects: 'src/BalzoredFast.sln'
     testRunTitle: 'dotnet test command'
