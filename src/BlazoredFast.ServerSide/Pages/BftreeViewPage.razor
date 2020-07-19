@@ -1,0 +1,28 @@
+@page "/bftreeview"
+
+<p>
+    <h1>BfTreeView</h1>
+</p>
+
+<p>
+    <h3>Original</h3>
+
+    <fast-tree-view>
+        <fast-tree-item>first level first</fast-tree-item>
+        <fast-tree-item>first level second</fast-tree-item>
+        <fast-tree-item>
+            first level third
+            <fast-tree-item slot="item">first level - second level first</fast-tree-item>
+            <fast-tree-item slot="item">first level - second level second</fast-tree-item>
+            <fast-tree-item slot="item">
+                first level - second level second
+                <fast-tree-item slot="item">first level - second level second - first</fast-tree-item>
+                <fast-tree-item slot="item">first level - second level second - second</fast-tree-item>
+                <fast-tree-item slot="item">first level - second level second - third</fast-tree-item>
+            </fast-tree-item>
+        </fast-tree-item>
+        <fast-tree-item>first level fourth</fast-tree-item>
+        <fast-tree-item>first level fifth</fast-tree-item>
+    </fast-tree-view>
+
+</p>
