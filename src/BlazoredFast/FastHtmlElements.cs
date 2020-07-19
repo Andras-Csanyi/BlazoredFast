@@ -10,5 +10,17 @@ namespace SayusiAndo.Carbon.BlazoredFast
         }
 
         public const string FastAccordionItem = "fast-accordion-item";
+
+        public struct FastTabs
+        {
+            public const string FastTabsHtmlElement = "fast-tabs";
+
+            public struct FastTabsAttributes
+            {
+                public const string ActiveId = "activeid";
+                public const string Orientation = "orientation";
+                public const string Activeindicator = "activeindicator";
+            }
+        }
     }
 }

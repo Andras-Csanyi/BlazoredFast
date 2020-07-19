@@ -35,5 +35,15 @@ namespace SayusiAndo.Carbon.BlazoredFast.Components.Tab
         {
             await ParentBfTab.ChangeActiveTab(Id).ConfigureAwait(false);
         }
+
+        protected override async Task OnInitializedAsync()
+        {
+            await RegisterTab().ConfigureAwait(false);
+        }
+
+        private async Task RegisterTab()
+        {
+            await ParentBfTab.RegisterTab(Id).ConfigureAwait(false);
+        }
     }
 }
