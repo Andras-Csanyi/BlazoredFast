@@ -5,14 +5,23 @@
 </p>
 
 <p>
+    <h1>Blazor version</h1>
+
+    <BfTreeView>
+        <BfTreeItem>tree item</BfTreeItem>
+        <BfTreeItem>tree item 2</BfTreeItem>
+    </BfTreeView>
+</p>
+
+<p>
     <h3>Original</h3>
 
     <fast-tree-view>
         <fast-tree-item>first level first</fast-tree-item>
         <fast-tree-item>first level second</fast-tree-item>
-        <fast-tree-item>
+        <fast-tree-item expanded="true">
             first level third
-            <fast-tree-item slot="item">first level - second level first</fast-tree-item>
+            <fast-tree-item slot="item" selected="true">first level - second level first</fast-tree-item>
             <fast-tree-item slot="item">first level - second level second</fast-tree-item>
             <fast-tree-item slot="item">
                 first level - second level second

@@ -10,7 +10,7 @@
         <Content Update="Pages\BfAccordionPage.razor">
             <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
         </Content>
-        <Content Update="Pages\BftreeViewPage.razor">
+        <Content Update="Pages\BfTreeViewPage.razor">
             <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
         </Content>
     </ItemGroup>

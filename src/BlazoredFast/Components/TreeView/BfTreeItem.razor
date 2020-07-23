@@ -1,0 +1,7 @@
+<fast-tree-item
+    expanded="@Expanded"
+    selected="@Selected"
+    slots="@_slot"
+    onclick="@(async () => await Select().ConfigureAwait(false))">
+    @ChildContent
+</fast-tree-item>

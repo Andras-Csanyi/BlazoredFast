@@ -25,5 +25,39 @@ namespace SayusiAndo.Carbon.BlazoredFast.Components
         public struct BfAccordionItem
         {
         }
+
+        public struct BfTreeView
+        {
+            public struct Html
+            {
+                public const string BfTreeView = "fast-tree-view";
+            }
+        }
+
+        public struct BfTreeItem
+        {
+            public struct Html
+            {
+                public const string BfTreeItem = "fast-tree-item";
+            }
+
+            public struct Attributes
+            {
+                public const string Expanded = "expanded";
+                public const string Selected = "selected";
+
+                public struct ExpandedValues
+                {
+                    public const string Expanded = "true";
+                    public const string Closed = "false";
+                }
+
+                public struct SelectedValues
+                {
+                    public const string Selected = "selected";
+                    public const string NotSelected = "";
+                }
+            }
+        }
     }
 }
