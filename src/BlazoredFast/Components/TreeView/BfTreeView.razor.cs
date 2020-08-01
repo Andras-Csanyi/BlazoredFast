@@ -19,6 +19,7 @@ namespace SayusiAndo.Carbon.BlazoredFast.Components.TreeView
         {
             if (_selected != null)
             {
+                _selected.Selected = !_selected.Selected;
                 _selected = item;
                 await InvokeAsync(StateHasChanged).ConfigureAwait(false);
             }
