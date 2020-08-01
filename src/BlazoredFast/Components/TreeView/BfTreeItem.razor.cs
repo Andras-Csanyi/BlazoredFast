@@ -1,6 +1,7 @@
 namespace SayusiAndo.Carbon.BlazoredFast.Components.TreeView
 {
     using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     using Microsoft.AspNetCore.Components;
@@ -17,6 +18,9 @@ namespace SayusiAndo.Carbon.BlazoredFast.Components.TreeView
         public RenderFragment ChildContent { get; set; }
 
         private string _slot = "item";
+
+        [Parameter(CaptureUnmatchedValues = true)]
+        public Dictionary<string, object> UnknownParameters { get; set; }
 
         [CascadingParameter]
         protected BfTreeView ParentTreeView { get; set; }
