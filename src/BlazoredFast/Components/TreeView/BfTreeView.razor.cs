@@ -17,9 +17,11 @@ namespace SayusiAndo.Carbon.BlazoredFast.Components.TreeView
 
         public async Task Select(BfTreeItem item)
         {
-            _selected.Selected = !_selected.Selected;
-            _selected = item;
-            await InvokeAsync(StateHasChanged).ConfigureAwait(false);
+            if (_selected != null)
+            {
+                _selected = item;
+                await InvokeAsync(StateHasChanged).ConfigureAwait(false);
+            }
         }
     }
 }

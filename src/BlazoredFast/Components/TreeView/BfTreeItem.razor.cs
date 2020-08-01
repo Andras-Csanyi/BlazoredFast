@@ -1,5 +1,6 @@
 namespace SayusiAndo.Carbon.BlazoredFast.Components.TreeView
 {
+    using System;
     using System.Threading.Tasks;
 
     using Microsoft.AspNetCore.Components;
@@ -10,7 +11,7 @@ namespace SayusiAndo.Carbon.BlazoredFast.Components.TreeView
         public bool Expanded { get; set; }
 
         [Parameter]
-        public bool Selected { get; set; }
+        public bool Selected { get; set; } = false;
 
         [Parameter]
         public RenderFragment ChildContent { get; set; }
@@ -18,12 +19,20 @@ namespace SayusiAndo.Carbon.BlazoredFast.Components.TreeView
         private string _slot = "item";
 
         [CascadingParameter]
-        public BfTreeView _parentTreeView { get; set; }
+        protected BfTreeView ParentTreeView { get; set; }
+
+        protected override async Task OnInitializedAsync()
+        {
+            if (Selected)
+            {
+                await Select().ConfigureAwait(false);
+            }
+        }
 
         private async Task Select()
         {
-            Selected = !Selected;
-            await _parentTreeView.Select(this).ConfigureAwait(false);
+            Selected = true;
+            await ParentTreeView.Select(this).ConfigureAwait(false);
         }
     }
 }
